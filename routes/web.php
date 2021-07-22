@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/rahasia', function () {
+    return view('rahasia');
+})->middleware('auth');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
